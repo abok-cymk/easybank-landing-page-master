@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Button from "./Button";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -71,12 +72,11 @@ export default function Navbar() {
             </a>
           </li>
         </ul>
-        <button
-          type="button"
+        <Button
+          text="Request Invite"
           className="hidden lg:block bg-gradient-to-r from-lime-green to-bright-cyan px-8 py-3 text-sm/6 rounded-full shadow cursor-pointer text-light-grayish-blue font-semibold transition hover:opacity-80"
-        >
-          Request Invite
-        </button>
+        />
+        
         <button
           type="button"
           className="lg:hidden flex cursor-pointer relative"
