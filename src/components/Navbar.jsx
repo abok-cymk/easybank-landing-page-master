@@ -17,11 +17,10 @@ export default function Navbar() {
         setMenuOpen(false);
       }
     };
-      document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
 
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [menuOpen]);
   return (
@@ -32,25 +31,54 @@ export default function Navbar() {
         </a>
         <ul className="hidden lg:flex items-center gap-6 text-grayish-blue text-sm/7">
           <li>
-            <a href="#" className="hover:underline hover:decoration-[.2em] hover:underline-offset-[2.4em] hover:decoration-lime-green">Home</a>
+            <a
+              href="#"
+              className="hover:underline hover:decoration-[.2em] hover:underline-offset-[2.4em] hover:decoration-lime-green"
+            >
+              Home
+            </a>
           </li>
           <li>
-            <a href="#" className="hover:underline hover:decoration-[.2em] hover:underline-offset-[2.4em] hover:decoration-lime-green">About</a>
+            <a
+              href="#"
+              className="hover:underline hover:decoration-[.2em] hover:underline-offset-[2.4em] hover:decoration-lime-green"
+            >
+              About
+            </a>
           </li>
           <li>
-            <a href="#" className="hover:underline hover:decoration-[.2em] hover:underline-offset-[2.4em] hover:decoration-lime-green">Contact</a>
+            <a
+              href="#"
+              className="hover:underline hover:decoration-[.2em] hover:underline-offset-[2.4em] hover:decoration-lime-green"
+            >
+              Contact
+            </a>
           </li>
           <li>
-            <a href="#" className="hover:underline hover:decoration-[.2em] hover:underline-offset-[2.4em] hover:decoration-lime-green">Blog</a>
+            <a
+              href="#"
+              className="hover:underline hover:decoration-[.2em] hover:underline-offset-[2.4em] hover:decoration-lime-green"
+            >
+              Blog
+            </a>
           </li>
           <li>
-            <a href="#" className="hover:underline hover:decoration-[.2em] hover:underline-offset-[2.4em] hover:decoration-lime-green">Careers</a>
+            <a
+              href="#"
+              className="hover:underline hover:decoration-[.2em] hover:underline-offset-[2.4em] hover:decoration-lime-green"
+            >
+              Careers
+            </a>
           </li>
         </ul>
-        <button className="hidden lg:block bg-gradient-to-r from-lime-green to-bright-cyan px-8 py-3 text-sm/6 rounded-full shadow cursor-pointer text-light-grayish-blue font-semibold transition hover:opacity-80">
+        <button
+          type="button"
+          className="hidden lg:block bg-gradient-to-r from-lime-green to-bright-cyan px-8 py-3 text-sm/6 rounded-full shadow cursor-pointer text-light-grayish-blue font-semibold transition hover:opacity-80"
+        >
           Request Invite
         </button>
         <button
+          type="button"
           className="lg:hidden flex cursor-pointer relative"
           onClick={toggleMenu}
           ref={buttonRef}

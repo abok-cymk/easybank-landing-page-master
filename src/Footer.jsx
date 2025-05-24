@@ -33,7 +33,7 @@ export default function Footer () {
             </ul>
           </div>
           <div className="flex flex-col justify-between gap-5 lg:gap-0 text-center lg:text-right">
-            <button className="bg-gradient-to-r from-lime-green to-bright-cyan px-8 py-3 text-sm/6 rounded-full shadow cursor-pointer text-light-grayish-blue font-semibold transition hover:opacity-80 max-sm:mx-auto lg:ml-auto">
+            <button type="button" className="bg-gradient-to-r from-lime-green to-bright-cyan px-8 py-3 text-sm/6 rounded-full shadow cursor-pointer text-light-grayish-blue font-semibold transition hover:opacity-80 max-sm:mx-auto lg:ml-auto">
               Request Invite
             </button>
             <p className="text-sm">© Easybank. All Rights Reserved</p>
