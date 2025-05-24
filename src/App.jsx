@@ -1,4 +1,5 @@
 import Header from "./Header"
+import LatestArticles from "./LatestArticles"
 import Services from "./Services"
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <main>
         <Services />
+        <LatestArticles />
       </main>
     </>
   )
