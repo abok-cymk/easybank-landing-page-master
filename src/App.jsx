@@ -1,10 +1,10 @@
-import Footer from "./Footer"
-import Header from "./Header"
-import LatestArticles from "./LatestArticles"
-import Services from "./Services"
+import { memo } from "react";
+import Footer from "./Footer";
+import Header from "./Header";
+import LatestArticles from "./LatestArticles";
+import Services from "./Services";
 
 function App() {
-
   return (
     <>
       <Header />
@@ -14,7 +14,7 @@ function App() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default memo(App);

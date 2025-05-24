@@ -1,4 +1,6 @@
+import { memo } from "react";
 import Article from "./components/Article";
+import useFadeInOnView from "./hooks/useFadeInOnView";
 
 const articles = [
   {
@@ -27,23 +29,31 @@ const articles = [
   },
 ];
 
-export default function LatestArticles() {
+function LatestArticles() {
+  const [ref, isVisible] = useFadeInOnView();
   return (
-    <section className="min-h-screen px-6">
+    <section
+      ref={ref}
+      className={`min-h-screen px-6 transition-opacity duration-700 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
       <div className="max-w-5xl mx-auto py-18">
         <h2 className="text-xl lg:text-3xl text-dark-blue">Latest Articles</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-4 lg:pt-10">
-            {articles.map((article, index) => (
-                <Article 
-                key={index}
-                image={article.image}
-                author={article.author}
-                title={article.title}
-                body={article.body}
-                />
-            ))}
+          {articles.map((article, index) => (
+            <Article
+              key={index}
+              image={article.image}
+              author={article.author}
+              title={article.title}
+              body={article.body}
+            />
+          ))}
         </div>
       </div>
     </section>
   );
 }
+
+export default memo(LatestArticles);

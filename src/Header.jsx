@@ -1,7 +1,8 @@
+import { memo } from "react";
 import Button from "./components/Button";
 import Navbar from "./components/Navbar";
 
-export default function Header() {
+function Header() {
   return (
     <header className="relative h-screen">
       <Navbar />
@@ -51,3 +52,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default memo(Header);

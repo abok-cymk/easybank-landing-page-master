@@ -1,4 +1,6 @@
+import { memo } from "react";
 import Service from "./components/Service";
+import useFadeInOnView from "./hooks/useFadeInOnView";
 
 const services = [
   {
@@ -23,9 +25,15 @@ const services = [
   },
 ];
 
-export default function Services() {
+function Services() {
+  const [ref, isVisible] = useFadeInOnView();
   return (
-    <section className="relative px-6 bg-light-grayish-blue min-h-screen">
+    <section
+      ref={ref}
+      className={`relative px-6 bg-light-grayish-blue min-h-screen transition-opacity duration-700 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
       <div className="max-w-5xl mx-auto py-18">
         <h2 className="text-2xl lg:text-4xl font-300 text-center lg:text-left my-3">
           Why choose Easybank?
@@ -49,3 +57,5 @@ export default function Services() {
     </section>
   );
 }
+
+export default memo(Services);

@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import Button from "./Button";
 
-export default function Navbar() {
+function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
@@ -76,7 +76,7 @@ export default function Navbar() {
           text="Request Invite"
           className="hidden lg:block bg-gradient-to-r from-lime-green to-bright-cyan px-8 py-3 text-sm/6 rounded-full shadow cursor-pointer text-light-grayish-blue font-semibold transition hover:opacity-80"
         />
-        
+
         <button
           type="button"
           className="lg:hidden flex cursor-pointer relative"
@@ -116,3 +116,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+export default memo(Navbar);
