@@ -82,6 +82,7 @@ export default function Navbar() {
           className="lg:hidden flex cursor-pointer relative"
           onClick={toggleMenu}
           ref={buttonRef}
+          aria-label={menuOpen ? "Close Mobile Menu" : "Open Mobile Menu"}
         >
           {menuOpen ? (
             <img src="/icon-close.svg" alt="" />
