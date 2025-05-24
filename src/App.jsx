@@ -1,3 +1,4 @@
+import Footer from "./Footer"
 import Header from "./Header"
 import LatestArticles from "./LatestArticles"
 import Services from "./Services"
@@ -11,6 +12,7 @@ function App() {
         <Services />
         <LatestArticles />
       </main>
+      <Footer />
     </>
   )
 }
