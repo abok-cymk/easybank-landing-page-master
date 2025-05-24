@@ -31,7 +31,7 @@ function Services() {
     <section
       ref={ref}
       className={`relative px-6 bg-light-grayish-blue min-h-screen transition-opacity duration-700 ${
-        isVisible ? "opacity-100" : "opacity-0"
+        isVisible ? "fade-in-up" : "opacity-0"
       }`}
     >
       <div className="max-w-5xl mx-auto py-18">

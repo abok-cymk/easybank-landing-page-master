@@ -9,7 +9,7 @@ function Footer() {
     <footer
       ref={ref}
       className={`bg-slate-950 w-full py-10 px-8 text-grayish-blue transition-opacity duration-700 ${
-        isVisible ? "opacity-100" : "opacity-0"
+        isVisible ? "fade-in-up" : "opacity-0"
       }`}
     >
       <div className="max-w-5xl mx-auto block my-3 lg:flex justify-between">

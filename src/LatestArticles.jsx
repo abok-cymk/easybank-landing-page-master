@@ -35,7 +35,7 @@ function LatestArticles() {
     <section
       ref={ref}
       className={`min-h-screen px-6 transition-opacity duration-700 ${
-        isVisible ? "opacity-100" : "opacity-0"
+        isVisible ? "fade-in-up" : "opacity-0"
       }`}
     >
       <div className="max-w-5xl mx-auto py-18">
