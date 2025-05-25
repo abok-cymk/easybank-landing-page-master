@@ -43,3 +43,5 @@ Users should be able to:
 - Frontend Mentor - [@bok-cymk](https://www.frontendmentor.io/profile/abok-cymk)
 - Twitter - [@abokallan22](https://www.twitter.com/abokallan22)
 
+### Badge
+[![DeepScan grade](https://deepscan.io/api/teams/27115/projects/29702/branches/949526/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=27115&pid=29702&bid=949526)
